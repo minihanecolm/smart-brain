@@ -16,6 +16,7 @@ class SignInForm extends Component{
      }
 
      onSubmitSignIn2 = ()=>{
+     	console.log('1')
      	fetch('https://face-app2.onrender.com/signIn',{
      		method: 'post',
      		headers: {'Content-type': 'application/json'},
@@ -26,7 +27,7 @@ class SignInForm extends Component{
      	})
      	.then(response => response.json())
      	.then(data =>{ 
-     		if(data.email && data.password){
+     		if(data){
      		    this.props.loadUser(data)
      			this.props.onRouteChange('home');}
      	})
