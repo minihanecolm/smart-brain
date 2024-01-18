@@ -26,7 +26,7 @@ class SignInForm extends Component{
      	})
      	.then(response => response.json())
      	.then(data =>{ 
-     		if(data.id){
+     		if(data.email && data.password){
      		    this.props.loadUser(data)
      			this.props.onRouteChange('home');}
      	})
