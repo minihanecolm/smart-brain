@@ -25,6 +25,7 @@ class SignInForm extends Component{
      			password: this.state.signInPassword
      		})
      	})
+     	.then(response=> console.log('2',response))
      	.then(response => response.json())
      	.then(data =>{ 
      		if(data){
