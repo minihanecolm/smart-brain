@@ -16,7 +16,6 @@ class SignInForm extends Component{
      }
 
      onSubmitSignIn2 = ()=>{
-     	console.log('1')
      	fetch('https://face-app2.onrender.com/signIn',{
      		method: 'post',
      		headers: {'Content-type': 'application/json'},
@@ -25,7 +24,7 @@ class SignInForm extends Component{
      			password: this.state.signInPassword
      		})
      	})
-         	.then(response => response.json())
+        	.then(response => response.json())
      	.then(data =>{ 
      		if(data){
      		    this.props.loadUser(data)
